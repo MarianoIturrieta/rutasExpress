@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+
+{{#if conocido}}
+
+    <h2>Hola {{nombre}}, dinos qué eres</h2>
+        <form action='/tipo' method='post'>
+    	    <input type="checkbox" name='alumno'>Alumno</input>
+            <input type="checkbox" name='padre'>Padre</input>
+            <input type="checkbox" name='docente'>Docente</input>
+            <button>Ingresar</button>
+        </form>   
+        
+{{/if}}
+
+{{#unless conocido}}
+<h2>Hola, dinos tu nombre</h2>
+    <form action='/ingresar' method='post'>
+	    <input type='text' name='nombre'>
+        <button>Ingresar</button>
+    </form>
+{{/unless}}
